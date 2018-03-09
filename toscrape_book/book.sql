@@ -1,0 +1,6 @@
+CREATE TABLE books(
+`upc` CHAR(16) NOT NULL PRIMARY KEY,
+`name` VARCHAR(256) NOT NULL,
+`price` VARCHAR(16) NOT NULL,
+`stock` INT
+)Engine = InnoDB DEFAULT CHARSET = utf8;
