@@ -1,4 +1,4 @@
 # scrapy_learn
 item_load twisted
-# now twisted scrapy 
-# in the future scrapy_redis
+# Now :twisted-mysql scrapy 
+# In the :future scrapy_redis
