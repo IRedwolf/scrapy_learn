@@ -2,12 +2,14 @@
 import scrapy
 from scrapy.linkextractor import LinkExtractor
 from ..items import ToscrapeBookItem, ToscrapeItemload
+from scrapy_redis.spiders import RedisSpider
 
 
-class BooksSpider(scrapy.Spider):
+class BooksSpider(RedisSpider):
     name = 'books'
     allowed_domains = ['books.toscrape.com']
-    start_urls = ['http://books.toscrape.com/']
+    #start_urls = ['http://books.toscrape.com/']
+    redis_key = 'books:start_urls'
 
     def parse(self, response):
         le = LinkExtractor(restrict_css='article.product_pod h3')
